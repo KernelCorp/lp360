@@ -1,7 +1,6 @@
 class News
   include Mongoid::Document
   include Mongoid::Timestamps
-  include ActsAsPage
 
   field :title, type: String
   field :text, type: String
