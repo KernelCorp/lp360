@@ -4,6 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0.8'
 
 gem 'mongoid', '~> 4.0.0'
+gem 'mongoid-paperclip'
+gem 'mongoid_slug'
+gem 'mongoid_acts_as_page', '~>0.5.4'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
