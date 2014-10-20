@@ -2,10 +2,13 @@ class Product
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Paperclip
+  include Mongoid::Slug
 
   field :name, type: String
   field :description, type: String
   field :video, type: String
+
+  slug  :name
 
   validates :name, presence: true
   validates_uniqueness_of :name

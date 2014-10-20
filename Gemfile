@@ -13,6 +13,8 @@ gem 'mongoid_acts_as_page', '~>0.5.4'
 gem 'rails_admin'
 gem 'devise'
 
+gem 'russian'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
