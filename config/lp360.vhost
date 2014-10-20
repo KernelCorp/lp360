@@ -1,4 +1,4 @@
-server {
+upstream lp360_server {
     unix:/var/www/lp360/shared/unicorn.sock fail_timeout=0;
 }
 
