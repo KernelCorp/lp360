@@ -15,4 +15,5 @@
 //= require jquery-address
 //= require turbolinks
 //= require semantic-ui
+//= require bxslider
 //= require_tree .

@@ -9,6 +9,7 @@ gem 'mongoid', '~> 4.0.0'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'mongoid_slug'
 gem 'mongoid_acts_as_page', '~>0.5.4'
+gem 'bxslider-rails'
 
 gem 'rails_admin'
 gem 'devise'
