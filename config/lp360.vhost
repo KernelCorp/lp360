@@ -1,4 +1,5 @@
-server unix:/var/www/lp360/shared/unicorn.sock fail_timeout=0;
+server {
+    unix:/var/www/lp360/shared/unicorn.sock fail_timeout=0;
 }
 
 server {
@@ -8,7 +9,7 @@ server {
     server_name lp.kerweb,ru www.lp.kerweb,ru;
     keepalive_timeout 5;
     root /var/www/lp360/current/public;
-        try_files $uri/index.html $uri.html $uri @myapp;
+    try_files $uri/index.html $uri.html $uri @myapp;
 
     location @myapp {
         proxy_pass http://lp360_server;
