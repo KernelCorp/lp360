@@ -1,0 +1,3 @@
+.ui.fluid.vertical.purple.menu
+  = Category.all.each do |cat|
+    = menu_item cat.name, category_path(cat)

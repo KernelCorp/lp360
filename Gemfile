@@ -3,8 +3,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.0.8'
 
+gem 'semantic-ui-sass'
+
 gem 'mongoid', '~> 4.0.0'
-gem 'mongoid-paperclip'
+gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'mongoid_slug'
 gem 'mongoid_acts_as_page', '~>0.5.4'
 

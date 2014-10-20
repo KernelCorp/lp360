@@ -1,6 +1,7 @@
 class Product
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Paperclip
 
   field :name, type: String
   field :description, type: String
@@ -16,6 +17,9 @@ class Product
   embeds_many :options
 
   accepts_nested_attributes_for :options
+
+  has_mongoid_attached_file :image, styles: { medium: '300x225>'}
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   before_create :get_parent_options
 

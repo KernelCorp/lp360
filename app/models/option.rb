@@ -7,7 +7,7 @@ class Option
 
   validates :name, presence: true
 
-  default_scope -> {order_by name: :desc}
+  default_scope -> {order_by name: :asc}
 
   embedded_in :product
 

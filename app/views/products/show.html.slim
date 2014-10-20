@@ -1,0 +1,35 @@
+h2 = @product.name
+.ui.tabular.menu
+  a.active.item data-tab='description' Описание
+  a.item data-tab='options' Характеристики
+  - if @product.video.present?
+    a.item data-tab='video' Видео
+
+
+.ui.tab.active data-tab='description'
+  h3 Описание
+
+  = @product.description
+
+.ui.tab data-tab='options'
+  h3 Характеристики
+
+  .ui.divided.list
+    = @product.options.each do |option|
+      .item
+        .content
+          .name
+            = option.name
+          .description
+            = option.value
+
+- if @product.video.present?
+  .ui.tab.active data-tab='video'
+    h3 Видео
+
+    = @product.video
+
+javascript:
+  $(document).ready(function () {
+    $('.ui.tabular.menu .item').tab();
+  });
