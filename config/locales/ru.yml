@@ -45,8 +45,16 @@ ru:
         few: Администратора
         many: Администраторов
         other: Администраторы
+      slider:
+        one: Слайдер
+        few: Слайдера
+        many: Слайдеров
+        other: Слайдеры
 
     attributes:
+      slider:
+        products: Товары
+        is_active: Активный
       prototype:
         name: Название
         opts: Список опций
