@@ -15,7 +15,7 @@ h2 = @product.name
   h3 Характеристики
 
   .ui.divided.list
-    = @product.options.each do |option|
+    - @product.options.each do |option|
       .item
         .content
           .name
@@ -31,5 +31,9 @@ h2 = @product.name
 
 javascript:
   $(document).ready(function () {
+    $('.ui.tabular.menu .item').tab();
+  });
+
+  $(document).on("page:load", function () {
     $('.ui.tabular.menu .item').tab();
   });

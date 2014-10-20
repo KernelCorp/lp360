@@ -58,6 +58,7 @@ ru:
         name: Название
         description: Описание
         video: Демонстрация
+        image: Картинка
       partner:
         role: Тип
         address: Адрес
