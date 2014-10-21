@@ -1,5 +1,3 @@
-$ = jQuery.noConflict()
-
 ready = ->
   $('.bxslider').bxSlider(
     mode: 'fade',
