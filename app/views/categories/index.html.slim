@@ -1,10 +1,11 @@
 - content_for :slider do
   .slider
     ul.bxslider
-      - Slider.active.products.each do |product|
-        li
-          a href=product_path(product)
-            img src=product.image.url title=product.name
+      - if @slider.present?
+        - @slider.products.each do |product|
+          li
+            a href=product_path(product)
+              img src=product.image.url title=product.name
 
 h2 i360
 | Камеры i360 - высококачественные ip-камеры для внутренней и наружной установки. Охватывают широкий круг задач и позволяют вести наблюдение с разрешением до 5 мегапикселей на расстоянии до 40 км.
