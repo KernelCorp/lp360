@@ -1,0 +1,109 @@
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: asset_url('opensans-bold.eot');
+    src: asset_url('opensans-bold.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-bold.woff') format('woff'),
+         asset_url('opensans-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansBoldItalic';
+    src: asset_url('opensans-bolditalic.eot');
+    src: asset_url('opensans-bolditalic.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-bolditalic.woff') format('woff'),
+         asset_url('opensans-bolditalic.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'OpenSansExtraboldRegular';
+    src: asset_url('opensans-extrabold.eot');
+    src: asset_url('opensans-extrabold.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-extrabold.woff') format('woff'),
+         asset_url('opensans-extrabold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansExtraboldItalic';
+    src: asset_url('opensans-extrabolditalic.eot');
+    src: asset_url('opensans-extrabolditalic.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-extrabolditalic.woff') format('woff'),
+         asset_url('opensans-extrabolditalic.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: asset_url('opensans-italic.eot');
+    src: asset_url('opensans-italic.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-italic.woff') format('woff'),
+         asset_url('opensans-italic.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansLightRegular';
+    src: asset_url('opensans-light.eot');
+    src: asset_url('opensans-light.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-light.woff') format('woff'),
+         asset_url('opensans-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansLightItalic';
+    src: asset_url('opensans-lightitalic.eot');
+    src: asset_url('opensans-lightitalic.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-lightitalic.woff') format('woff'),
+         asset_url('opensans-lightitalic.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: asset_url('opensans-regular.eot');
+    src: asset_url('opensans-regular.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-regular.woff') format('woff'),
+         asset_url('opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansSemiboldRegular';
+    src: asset_url('opensans-semibold.eot');
+    src: asset_url('opensans-semibold.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-semibold.woff') format('woff'),
+         asset_url('opensans-semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansSemiboldItalic';
+    src: asset_url('opensans-semibolditalic.eot');
+    src: asset_url('opensans-semibolditalic.eot?#iefix') format('embedded-opentype'),
+         asset_url('opensans-semibolditalic.woff') format('woff'),
+         asset_url('opensans-semibolditalic.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansCondensedLight';
+    src: asset_url('open_sans_condensed_light.eot');
+    src: asset_url('open_sans_condensed_light.eot?#iefix') format('embedded-opentype'),
+         asset_url('open_sans_condensed_light.woff') format('woff'),
+         asset_url('open_sans_condensed_light.ttf') format('truetype'),
+         asset_url('open_sans_condensed_light.svg#OpenSansCondensedLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
