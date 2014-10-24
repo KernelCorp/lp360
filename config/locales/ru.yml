@@ -65,6 +65,7 @@ ru:
       product:
         name: Название
         description: Описание
+        preview: Краткое описание
         video: Демонстрация
         image: Картинка
       partner:

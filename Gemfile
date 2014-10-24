@@ -79,6 +79,8 @@ end
 # Use unicorn as the app server
 gem 'unicorn', platform: :ruby
 
+gem 'font-awesome-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
