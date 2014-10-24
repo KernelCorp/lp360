@@ -1,16 +1,19 @@
-class @Menu
+class @MenuItemWithSub
 
-  constructor: (toggles)->
-    $('.ui.sub.menu').hide()
-    toggles.on 'click', @toggleSubMenu
+  constructor: (item, subMenu)->
+    @subMenu = subMenu
+    @subMenu.hide()
+    @item = item
+    @item.on 'click', @toggleSubMenu
 
 
-  toggleSubMenu: ->
-    subMenu = $('.ui.sub.menu')
-    if subMenu.is(':visible')
-      subMenu.hide()
+  toggleSubMenu: =>
+    if @subMenu.is(':visible')
+      @item.removeClass 'active'
+      @subMenu.hide()
     else
-      subMenu.show()
+      @item.addClass 'active'
+      @subMenu.show()
     false
 
 

@@ -9,9 +9,9 @@
   .ui.secondary.fluid.five.item.menu
     - Page.each do |page|
       = link_to page.name, page_path(page), class: 'item'
-    .ui.sub.menu
+    .ui.sub.secondary.menu
       a.item href='#' asdda
 
 
 coffee:
-  new Menu $('.right.menu .item')
+  new @MenuItemWithSub $('.ui.secondary.fluid.five.item.menu .item:first'), $('.ui.sub.secondary.menu')
