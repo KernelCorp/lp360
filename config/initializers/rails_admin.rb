@@ -33,7 +33,9 @@ RailsAdmin.config do |config|
 
   config.model Page do
     edit do
+      field :name
       field :text, :ck_editor
+      field :position
     end
   end
 end
