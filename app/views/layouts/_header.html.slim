@@ -1,9 +1,18 @@
-.ui.inverted.purple.menu
-  .container
-    = link_to '/', class: 'item' do
-      i.home.icon
-      | i360
+.container
+  .preheader
+    #logo
+      = link_to '/', class: '' do
+        = image_tag ('ip360_logo.png')
+    #info
+      | Телефон
 
-    .right.menu
-      - Page.each do |page|
-        = link_to page.name, page_path(page), class: 'item'
+  .ui.secondary.fluid.five.item.menu
+    - Page.each do |page|
+      = link_to page.name, page_path(page), class: 'item'
+/.ui.secondary.vertical.pointing.menu
+  /#right_menu
+  /  ul
+  /    - Page.each do |page|
+  /      li
+  /        = link_to page.name, page_path(page), class: 'item'
+
