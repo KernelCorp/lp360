@@ -1,14 +1,14 @@
+.container
+  .preheader
+    #logo
+      = link_to '/', class: '' do
+        = image_tag ('ip360_logo.png')
+    #info
+      | Телефон
 
-.ui.inverted.purple.menu
-  .container
-    = link_to '/', class: 'item' do
-      i.home.icon
-      | i360
-
-    .right.menu
-      - Page.each do |page|
-        = link_to page.name, page_path(page), class: 'item'
-
+  .ui.secondary.fluid.five.item.menu
+    - Page.each do |page|
+      = link_to page.name, page_path(page), class: 'item'
     .ui.sub.menu
       a.item href='#' asdda
 
