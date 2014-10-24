@@ -1,1 +1,0 @@
-NonStupidDigestAssets.whitelist = Ckeditor.assets + %w(ckeditor/*)

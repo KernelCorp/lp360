@@ -37,7 +37,7 @@ before 'deploy:setup', 'rvm:install_rvm', 'rvm:install_ruby'
 after 'deploy', 'deploy:migrate'
 after 'deploy:update', 'deploy:cleanup'
 after 'deploy', 'deploy:restart'
-
+after 'deploy:assets:precompile', 'copy_nondigest_assets'
 
 # Далее идут правила для перезапуска unicorn. Их стоит просто принять на веру - они работают.
 # В случае с Rails 3 приложениями стоит заменять bundle exec unicorn_rails на bundle exec unicorn
@@ -55,4 +55,9 @@ namespace :deploy do
   task :init_vhost do
     run "ln -s #{deploy_to}/current/config/#{application}.vhost /etc/nginx/sites-enabled/#{application}"
   end
+end
+
+desc 'copy ckeditor nondigest assets'
+task :copy_nondigest_assets, roles: :app do
+  run "cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} ckeditor:create_nondigest_assets"
 end
