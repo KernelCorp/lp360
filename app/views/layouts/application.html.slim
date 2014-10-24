@@ -11,7 +11,11 @@ html
       = render partial: 'layouts/header'
       #main.clearfix
         .container
-          .ui.grey.segment
-            = yield
+          .ui.grid
+            .four.wide.column
+              = render partial: 'layouts/navigation'
+            .twelve.wide.column
+              .ui.grey.segment
+                = yield
     footer
       = render partial: 'layouts/footer'
