@@ -1,4 +1,9 @@
-.ui.inverted.grey.menu
+.ui.inverted.purple.menu
   .container
     = link_to '/', class: 'item' do
-      = image_tag ('ip360_logo.png')
+      i.home.icon
+      | i360
+
+    .right.menu
+      - Page.each do |page|
+        = link_to page.name, page_path(page), class: 'item'

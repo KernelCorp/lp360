@@ -1,10 +1,11 @@
 - content_for :slider do
   .slider
     ul.bxslider
-      - Slider.active.products.each do |product|
-        li
-          a href=product_path(product)
-            img src=product.image.url title=product.name
+      - if @slider.present?
+        - @slider.products.each do |product|
+          li
+            a href=product_path(product)
+              img src=product.image.url title=product.name
 
 h2 ip360
 p С ip360 работать легко и приятно, потому что мы:

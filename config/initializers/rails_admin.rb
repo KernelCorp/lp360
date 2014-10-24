@@ -30,4 +30,12 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Page do
+    edit do
+      field :name
+      field :text, :ck_editor
+      field :position
+    end
+  end
 end
