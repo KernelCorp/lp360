@@ -1,3 +1,4 @@
+
 .ui.inverted.purple.menu
   .container
     = link_to '/', class: 'item' do
@@ -7,3 +8,10 @@
     .right.menu
       - Page.each do |page|
         = link_to page.name, page_path(page), class: 'item'
+
+    .ui.sub.menu
+      a.item href='#' asdda
+
+
+coffee:
+  new Menu $('.right.menu .item')
