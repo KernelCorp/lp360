@@ -7,11 +7,15 @@
       | Телефон
 
   .ui.secondary.fluid.five.item.menu
-    - Page.each do |page|
-      = link_to page.name, page_path(page), class: 'item'
-    .ui.sub.secondary.menu
-      a.item href='#' asdda
-
-
-coffee:
-  new @MenuItemWithSub $('.ui.secondary.fluid.five.item.menu .item:first'), $('.ui.sub.secondary.menu')
+    - sub_menus = []
+    - Page.first_lvl.each do |page|
+      - if page.pages.empty?
+        = link_to page.name, page_path(page), class: 'item'
+      - else
+        - sub_menus << page
+        a.item onclick="$('.ui.sub.secondary.menu##{page.id}').toggle()"
+          = page.name
+      - sub_menus.each do |sub|
+        .ui.sub.secondary.menu id=sub.id style="display:none"
+          - sub.pages.each do |child|
+            = link_to child.name, page_path(child), class: 'item'
