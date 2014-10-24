@@ -39,6 +39,10 @@ RailsAdmin.config do |config|
     nestable_list true
   end
 
+  config.model Category do
+    nestable_list true
+  end
+
   config.model Page do
     edit do
       field :text, :ck_editor

@@ -2,6 +2,7 @@ class Category
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Slug
+  field :position, type: Integer
 
   field :name, type: String
 
@@ -10,7 +11,7 @@ class Category
   validates :name, presence: true
   validates_uniqueness_of :name
 
-  default_scope -> {order_by created_at: :desc}
+  default_scope -> {asc :position}
 
   belongs_to :prototype
   has_many :products, dependent: :destroy
