@@ -8,7 +8,7 @@ class Product
   field :description, type: String
   field :preview, type: String
   field :video, type: String
-  field :position, type: Integer, default: 0
+  field :position, type: Integer
 
   slug  :name
 
@@ -24,7 +24,7 @@ class Product
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   validates :name, presence: true
   validates_uniqueness_of :name
-  validates_length_of :preview, maximum: 200
+  validates_length_of :preview, maximum: 100
 
   before_create :get_parent_options
 
