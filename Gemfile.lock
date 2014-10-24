@@ -335,6 +335,7 @@ DEPENDENCIES
   devise
   email_spec
   factory_girl_rails
+  font-awesome-rails
   jbuilder (~> 1.2)
   jquery-rails
   mongoid (~> 4.0.0)
