@@ -2,7 +2,8 @@ h2 = @category.name
 .ui.items
   - @category.products.each do |product|
     a.item.wrapper.product href="#{product_path(product)}#/description"
-      img src=product.image.url(:medium)
+      .product_image
+        img src=product.image.url(:medium)
       .content
         .name
           = product.name

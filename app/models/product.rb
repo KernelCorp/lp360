@@ -20,7 +20,7 @@ class Product
 
   accepts_nested_attributes_for :options
 
-  has_mongoid_attached_file :image, styles: { medium: '210x190>>'}
+  has_mongoid_attached_file :image, styles: { medium: '210x150>>'}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   validates :name, presence: true
   validates_uniqueness_of :name
