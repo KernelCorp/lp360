@@ -8,14 +8,11 @@ class Product
   field :description, type: String
   field :preview, type: String
   field :video, type: String
+  field :position, type: Integer
 
   slug  :name
 
-  validates :name, presence: true
-  validates_uniqueness_of :name
-  validates_length_of :preview, maximum: 100
-
-  default_scope -> {order_by created_at: :desc}
+  default_scope -> {asc :position}
 
   belongs_to :prototype
   belongs_to :category
@@ -25,6 +22,9 @@ class Product
 
   has_mongoid_attached_file :image, styles: { medium: '210x190>>'}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+  validates :name, presence: true
+  validates_uniqueness_of :name
+  validates_length_of :preview, maximum: 100
 
   before_create :get_parent_options
 

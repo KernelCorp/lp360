@@ -16,19 +16,27 @@ RailsAdmin.config do |config|
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
   config.actions do
+    # root actions
     dashboard                     # mandatory
+    # collection actions
     index                         # mandatory
     new
     export
+    history_index
     bulk_delete
+    # member actions
     show
     edit
     delete
+    history_show
     show_in_app
 
-    ## With an audit adapter, you can add:
-    # history_index
-    # history_show
+    # Add the nestable action for configured models
+    nestable
+  end
+
+  config.model Product do
+    nestable_list true
   end
 
   config.model Page do

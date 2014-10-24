@@ -134,6 +134,13 @@ ru:
       item: "Элемент"
       message: "Сообщение"
     actions:
+      nestable:
+        breadcrumb:
+          Сортировка
+        menu:
+          Сортировка
+        success:
+          Успех
       dashboard:
         title: "Управление сайтом"
         menu: "Панель управления"
