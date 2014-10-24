@@ -5,6 +5,9 @@ gem 'rails', '~> 4.0.8'
 
 gem 'semantic-ui-sass'
 
+
+gem 'non-stupid-digest-assets'
+
 gem 'mongoid', '~> 4.0.0'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'mongoid_slug'

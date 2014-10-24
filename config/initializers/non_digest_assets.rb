@@ -1,0 +1,1 @@
+NonStupidDigestAssets.whitelist = ['ckeditor/ckeditor.js', 'ckeditor/skins/moono/icons.png ']
