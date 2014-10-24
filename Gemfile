@@ -12,6 +12,7 @@ gem 'mongoid_acts_as_page', '~>0.5.4'
 gem 'bxslider-rails'
 
 gem 'rails_admin'
+gem 'ckeditor'
 gem 'devise'
 
 gem 'russian'

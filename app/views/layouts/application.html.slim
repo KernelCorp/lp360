@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title
+      | i360
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    #wrap
+      = render partial: 'layouts/header'
+      #main.clearfix
+        .container
+          .ui.purple.segment
+            = yield
+    footer
+      = render partial: 'layouts/footer'
