@@ -1,1 +1,1 @@
-NonStupidDigestAssets.whitelist = Ckeditor.assets
+NonStupidDigestAssets.whitelist = Ckeditor.assets + %w(ckeditor/skins/moono/icons.png )
