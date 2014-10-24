@@ -8,12 +8,13 @@ class Product
   field :description, type: String
   field :preview, type: String
   field :video, type: String
+  field :product_id, type: Integer
 
   slug  :name
 
   validates :name, presence: true
   validates_uniqueness_of :name
-  validates_length_of :preview, maximum: 100
+  validates_length_of :preview, maximum: 200
 
   default_scope -> {order_by created_at: :desc}
 
