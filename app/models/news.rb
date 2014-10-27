@@ -8,6 +8,6 @@ class News
   validates :title, presence: true
   validates_uniqueness_of :title
 
-  default_scope -> {order_by created_at: :desc}
+  default_scope -> {desc :created_at}
 
 end
