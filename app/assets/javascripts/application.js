@@ -16,5 +16,4 @@
 //= require turbolinks
 //= require semantic-ui
 //= require bxslider
-//= require jquery.themepunch.revolution.min.js
 //= require_tree .
