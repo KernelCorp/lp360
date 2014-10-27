@@ -6,7 +6,7 @@
     #info
       | Телефон
 
-  .ui.tiered.fluid.five.item.menu
+  .ui.tiered.fluid.six.item.menu
     - sub_menus = []
     - Page.first_lvl.each do |page|
       - if page.pages.empty?
@@ -15,6 +15,7 @@
         - sub_menus << page
         a.item onclick="$('.ui.sub.secondary.menu##{page.id}').toggle()"
           = page.name
+    a.item href='/price_ip360.xlsx' Прайс-лист
     - sub_menus.each do |sub|
       .ui.sub.secondary.menu id=sub.id style="display:none"
         - sub.pages.each do |child|
