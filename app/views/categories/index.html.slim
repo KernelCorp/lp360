@@ -1,10 +1,13 @@
 - content_for :slider do
-  .slider
-    ul.bxslider
-      - if @slider.present?
-        - @slider.products.each do |product|
-          li
-            a href=product_path(product)
+  .slider-container
+    .slider
+      ul
+        - if @slider.present?
+          - @slider.products.each do |product|
+            li data-masterspeed="300" data-slotamount="10" data-transition="fade"
+              .tp-caption.modern_medium_light.sfb data-easing="easeOutExpo" data-endeasing="easeInSine" data-endspeed="300" data-speed="600" data-start="1000" data-x="60" data-y="40"
+                = product.name
+              a.to_product href=product_path(product)
               img src=product.image.url title=product.name
 
 h3 Для получения максимально выгодных условий необходимо:
