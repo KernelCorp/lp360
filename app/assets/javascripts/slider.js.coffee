@@ -1,7 +1,6 @@
 ready = ->
   $('.bxslider').bxSlider(
-    mode: 'fade',
-    captions: true
+    mode: 'fade'
   )
 
 $(document).on 'page:load', ready

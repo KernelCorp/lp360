@@ -4,6 +4,8 @@
       - if @slider.present?
         - @slider.products.each do |product|
           li
+            .name = product.name
+            .preview = product.preview
             a href=product_path(product)
               img src=product.image.url title=product.name
 
