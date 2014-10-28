@@ -6,7 +6,7 @@ server {
     listen 80;
 
     client_max_body_size 1G;
-    server_name lp.kerweb.ru www.lp.kerweb.ru;
+    server_name lp.kerweb.ru www.lp.kerweb.ru ip360.ru www.ip360.ru;
     keepalive_timeout 5;
     root /var/www/lp360/current/public;
         try_files $uri/index.html $uri.html $uri @myapp;
