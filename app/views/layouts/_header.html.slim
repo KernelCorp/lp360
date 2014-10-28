@@ -3,8 +3,22 @@
     #logo
       = link_to '/', class: '' do
         = image_tag ('ip360_logo.png')
+
+      #slogan
+        | Современные системы<br>
+          видеонаблюдения<br>
+          от производителя
     #info
-      | Телефон
+      .phone
+        i.fa.fa-phone style='margin-right: 20px;'
+        = link_to ('+7 (383) 209 13 55'), 'tel:+73832091355'
+      .mail
+        i.fa.fa-envelope-o style='margin-right: 15px;'
+        = mail_to ('sale1@ip360.ru')
+        br
+        = mail_to ('sale2@ip360.ru')
+
+
 
   .ui.tiered.fluid.six.item.menu
     - sub_menus = []
