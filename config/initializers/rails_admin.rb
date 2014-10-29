@@ -1,4 +1,5 @@
 RailsAdmin.config do |config|
+  config.main_app_name = ["ip360", "Управление сайтом"]
 
   ### Popular gems integration
 
