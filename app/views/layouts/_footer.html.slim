@@ -1,7 +1,32 @@
-.container
-  span.copyright
-    | &copy Copyright &nbsp
-    = Date.today.year
-    | | ip360. All rights reserved.
-  span.kerweb
-    = link_to 'Студия разработки Kernel Web', 'http://kerweb.ru', target: 'blank'
+#footer
+  .inner
+    .logo
+      a href='/'
+        = image_tag 'footer_logo.png'
+    .footer_col
+      .icon
+        = image_tag 'house.png'
+      .info
+        p Новосибирск, ул.Пирогова 26 цокольный этаж
+    .footer_col
+      .icon
+        = image_tag 'mail.png'
+      .info
+        = mail_to 'sale1@ip360.ru', 'sale1@ip360.ru'
+        br
+        = mail_to 'sale2@ip360.ru', 'sale1@ip360.ru'
+        br
+        = mail_to 'support@ip360.ru', 'support@ip360.ru'
+    .phone
+      .big
+        | 8 800 333 79 44
+      .small
+        | бесплатно по России
+
+    .copyright
+      .span
+        | &copy Copyright &nbsp
+        = Date.today.year
+        | | ip360. All rights reserved.
+      .kerweb
+        = link_to 'Студия разработки Kernel Web', 'http://kerweb.ru', target: 'blank'
