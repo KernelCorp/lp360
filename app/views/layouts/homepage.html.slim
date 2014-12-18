@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title ip360 | Продажа современных систем видеонаблюдения оптом и в розницу
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    #wrap
+      = render partial: 'layouts/header'
+      .slider
+        ul.bxslider
+          - if @slider.present?
+            - @slider.products.each do |product|
+              li
+                table
+                  tr
+                    td
+                      .left
+                        .name = product.name
+                        .preview = product.preview
+                        .description = product.description
+                    td
+                      .photo
+                        a href=product_path(product)
+                          = image_tag 'ip360_logo.png'
+      /img src=product.image.url title=product.name
+    footer
+      = render partial: 'layouts/footer'
