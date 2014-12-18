@@ -19,17 +19,20 @@
           br
             = mail_to ('service@ip360.ru')
 
-    .ui.tiered.fluid.five.item.menu
+    .top_menu
       - sub_menus = []
       - Page.first_lvl.each do |page|
         - if page.pages.empty?
-          = link_to page.name, page_path(page), class: 'item'
+          = menu_item(page.name, page_path(page))
         - else
-          - sub_menus << page
-          a.item onclick="$('.ui.sub.secondary.menu##{page.id}').toggle()"
-            = page.name
-      /a.item href='/price_ip360.xlsx' Прайс-лист
-      - sub_menus.each do |sub|
-        .ui.sub.secondary.menu id=sub.id style="display:none"
-          - sub.pages.each do |child|
-            = link_to child.name, page_path(child), class: 'item'
+          .item
+            .not_empty
+              .parent_head
+                - sub_menus << page
+                a onclick="$('.children##{page.id}').toggle()"
+                  = page.name
+              - sub_menus.each do |sub|
+                .children id=sub.id style="display:none"
+                  - sub.pages.each do |child|
+                    .item
+                      = link_to child.name, page_path(child)
