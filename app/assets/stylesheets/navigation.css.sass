@@ -1,0 +1,47 @@
+.left_menu
+  display: inline-block
+  z-index: 2
+  color: white
+  position: absolute
+  a
+    color: white
+  .item
+    width: 220px
+    height: 45px
+    margin-bottom: 2px
+    background: #bfccd3
+    color: white
+    font-size: 18px
+    font-family: 'agora_sans_medium'
+    cursor: pointer
+    a
+      position: absolute
+      width: 190px
+      height: 35px
+      padding-left: 30px
+      padding-top: 10px
+      text-decoration: none
+      &:hover
+        .item
+        background: #cedce4
+        color: #e31f25
+    .not_empty
+      .parent_head
+        width: 190px
+        height: 35px
+        padding-left: 30px
+        padding-top: 10px
+      .children
+        display: none
+        margin-left: 220px
+        margin-top: -45px
+        .item
+          background: rgba(191,204,211,0.9)
+          a
+            &:hover
+              background: rgba(206,220,228,0.8)
+              color: #e31f25
+
+
+    &.active
+

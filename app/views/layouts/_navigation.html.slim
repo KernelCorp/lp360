@@ -1,3 +1,15 @@
-.ui.fluid.vertical.menu
-  = Category.all.each do |cat|
-    = menu_item cat.name, category_path(cat)
+.left_menu
+  - Category.first_level.each do |cat|
+    - if cat.has_children?
+      = menu_item(cat.name, category_path(cat))
+    - else
+      .item
+        .not_empty
+          .parent_head id=cat.id
+            = cat.name
+          .children data-for=cat.id
+            - cat.children.each do |ch|
+              = menu_item ch.name, category_path(ch)
+
+coffee:
+  new NavigationController()
