@@ -1,38 +1,35 @@
-.container
-  .preheader
-    #logo
-      = link_to '/', class: '' do
-        = image_tag ('ip360_logo.png')
+#header
+  .container
+    .preheader
+      #left
+        #logo
+          = link_to '/', class: '' do
+            = image_tag ('ip360_logo.png')
+        #slogan
+          = image_tag ('slogan.png')
+      #info
+        .phone
+          i.fa.fa-phone style='margin-right: 15px;'
+          = link_to ('8 800 333 79 44'), 'tel:88003337944'
+        .mail
+          i.fa.fa-envelope-o style='margin-right: 15px;'
+          = mail_to ('sale1@ip360.ru')
+          br
+          = mail_to ('sale2@ip360.ru')
+          br
+            = mail_to ('service@ip360.ru')
 
-      #slogan
-        | Современные системы<br>
-          видеонаблюдения<br>
-          от производителя
-    #info
-      .phone
-        i.fa.fa-phone style='margin-right: 15px;'
-        = link_to ('8 800 333 79 44'), 'tel:88003337944'
-      .mail
-        i.fa.fa-envelope-o style='margin-right: 15px;'
-        = mail_to ('sale1@ip360.ru')
-        br
-        = mail_to ('sale2@ip360.ru')
-        br
-          = mail_to ('service@ip360.ru')
-
-
-
-  .ui.tiered.fluid.five.item.menu
-    - sub_menus = []
-    - Page.first_lvl.each do |page|
-      - if page.pages.empty?
-        = link_to page.name, page_path(page), class: 'item'
-      - else
-        - sub_menus << page
-        a.item onclick="$('.ui.sub.secondary.menu##{page.id}').toggle()"
-          = page.name
-    /a.item href='/price_ip360.xlsx' Прайс-лист
-    - sub_menus.each do |sub|
-      .ui.sub.secondary.menu id=sub.id style="display:none"
-        - sub.pages.each do |child|
-          = link_to child.name, page_path(child), class: 'item'
+    .ui.tiered.fluid.five.item.menu
+      - sub_menus = []
+      - Page.first_lvl.each do |page|
+        - if page.pages.empty?
+          = link_to page.name, page_path(page), class: 'item'
+        - else
+          - sub_menus << page
+          a.item onclick="$('.ui.sub.secondary.menu##{page.id}').toggle()"
+            = page.name
+      /a.item href='/price_ip360.xlsx' Прайс-лист
+      - sub_menus.each do |sub|
+        .ui.sub.secondary.menu id=sub.id style="display:none"
+          - sub.pages.each do |child|
+            = link_to child.name, page_path(child), class: 'item'
