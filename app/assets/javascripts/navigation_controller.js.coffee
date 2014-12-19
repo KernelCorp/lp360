@@ -6,3 +6,4 @@ class @NavigationController
   onClickHandler: (e)=>
     id = e.target.id
     $(".children[data-for='#{id}']").toggle()
+    $(".parent_head").toggleClass("active")
