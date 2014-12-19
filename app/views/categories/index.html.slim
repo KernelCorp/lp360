@@ -1,26 +1,31 @@
-- content_for :slider do
-  .slider
-    ul.bxslider
-      - if @slider.present?
-        - @slider.products.each do |product|
-          li
-            .name = product.name
-            .preview = product.preview
-            a href=product_path(product)
-              img src=product.image.url title=product.name
+#category
+  h2 Каталог
+  .items
+    - Category.first_level.each do |category|
+      h3 = category.name
+      - if !category.has_children?
+        - category.children.each do |child|
+          h4 = child.name
+          - child.products.each do |product|
+            a href="#{product_path(product)}#/description"
+              .items
+                .product
+                  .product_image
+                    img src=product.image.url(:medium)
+                  .content
+                    .name
+                      = product.name
+                    .description
+                      = product.preview
+      - else
+        - category.products.each do |product|
+          a href="#{product_path(product)}#/description"
+            .product
+              .product_image
+                img src=product.image.url(:medium)
+              .content
+                .name
+                  = product.name
+                .description
+                  = product.preview
 
-h3 Для получения максимально выгодных условий необходимо:
-ul
-  li Cрочно связаться с нашими специалистами.
-  li Cказать, что хотите стать представителем ip360 в своем городе.
-  li Оформить заказ и оплатить его.
-  li Быстро или медленно, но наращивать объемы.
-
-h3 Будьте первыми, звоните прямо сейчас!
-
-script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"
-script charset="utf-8" type="text/javascript" new DGWidgetLoader({"borderColor":"#a3a3a3","width":"700","height":"500","wid":"843acb21ba7f8a92b3606cb8e3512bd6","pos":{"lon":"83.097626578226","lat":"54.851206838603","zoom":"16"},"opt":{"ref":"hidden","card":["name","contacts","schedule","payings","flamp"],"city":"novosibirsk"},"org":[{"id":"70000001007438034"}]})
-
-h2
-  i.fa.fa-phone
-  |  8 800 333 79 44

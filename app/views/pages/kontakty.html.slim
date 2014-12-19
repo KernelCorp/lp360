@@ -1,28 +1,31 @@
 #contacts
   h2 = @page.name
   .container
-    h4 Телефон:
-    .phone
-      .fa.fa-phone-square
-      | 8 800 333 79 44 (бесплатно по России)
-    h4 E-mail:
-    .mail
+    .left
+      h4 style='margin-top:0;'
+        | Телефон:
+      .phone
+        .fa.fa-phone-square
+        | 8 800 333 79 44 (бесплатно по России)
+      h4 E-mail:
+      .mail
+        .fa.fa-envelope
+        = mail_to "sale1@ip360.ru", "sale1@ip360.ru"
+        br
+        .fa.fa-envelope
+        = mail_to "sale1@ip360.ru", "sale1@ip360.ru"
+        br
+      h4 Служба технической поддержки:
       .fa.fa-envelope
-      = mail_to "sale1@ip360.ru", "sale1@ip360.ru"
-      br
-      .fa.fa-envelope
-      = mail_to "sale1@ip360.ru", "sale1@ip360.ru"
-      br
-    h4 Служба технической поддержки:
-    .fa.fa-envelope
-    = mail_to 'service@ip360.ru', 'service@ip360.ru'
+      = mail_to 'service@ip360.ru', 'service@ip360.ru'
 
-    .adress
-      h4 Наш адрес:
-      .fa.fa-home
-      | г. Новосибирск, ул. Пирогова, 26
+      .adress
+        h4 Наш адрес:
+        .fa.fa-home
+        | г. Новосибирск, ул. Пирогова, 26
 
-      #map style="width:730px; height:400px;"
+    .right
+      #map style="width:600px; height:400px;"
         javascript:
           var map;
 

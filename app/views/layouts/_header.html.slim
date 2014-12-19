@@ -20,6 +20,8 @@
             = mail_to ('service@ip360.ru')
 
     .top_menu
+      .item
+        = link_to 'Каталог', categories_path
       - sub_menus = []
       - Page.first_lvl.each do |page|
         - if page.pages.empty?
@@ -37,4 +39,4 @@
                     .item
                       = link_to child.name, page_path(child)
       .item
-        = link_to 'Новости', '/news'
+        = link_to 'Новости', news_index_path

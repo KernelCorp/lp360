@@ -8,9 +8,7 @@ html
   body
     #wrap
       = render partial: 'layouts/header'
-      #main.clearfix
-        .container
-          = yield :slider
+      .container
           .ui.grid
             .four.wide.column
               = render partial: 'layouts/navigation'
