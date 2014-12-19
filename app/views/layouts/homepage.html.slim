@@ -23,7 +23,7 @@ html
                     td
                       .photo
                         a href=product_path(product)
-                          = image_tag 'ip360_logo.png'
+                          img src=product.image.url title=product.name
       /img src=product.image.url title=product.name
     footer
       = render partial: 'layouts/footer'

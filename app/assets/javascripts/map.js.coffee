@@ -1,6 +1,30 @@
-ready = ->
-  if $('#firmsonmap_biglink').size() != 0
-    new DGWidgetLoader({"borderColor":"#a3a3a3","width":"700","height":"500","wid":"843acb21ba7f8a92b3606cb8e3512bd6","pos":{"lon":"83.097626578226","lat":"54.851206838603","zoom":"16"},"opt":{"ref":"hidden","card":["name","contacts","schedule","payings","flamp"],"city":"novosibirsk"},"org":[{"id":"70000001007438034"}]})
+@map = ->
+  if DG.isReady
+    work_with_map()
+  else
+    DG.autoload work_with_map
 
-$(document).ready ready
-$(document).on "page:load", ready
+work_with_map = ->
+  myMap = new DG.Map 'DG_Map'
+  myMap.disableScrollZoom()
+  myMap.setCenter new DG.GeoPoint(83.111794799643,54.857994813727), 16
+
+  myBalloon = new DG.Balloons.Common({
+    geoPoint: new DG.GeoPoint(83.111489027815,54.857855863147)
+    contentHtml: 'Офис компании MyGenetics'
+  })
+
+  myMarker = new DG.Markers.Common({
+    geoPoint: new DG.GeoPoint(83.112198, 54.854133)
+  ###
+  clickCallback: ->
+    if !myMap.balloons.getDefaultGroup().contains(myBalloon)
+      myMap.balloons.add myBalloon
+    else
+      myBalloon.show()
+  ###
+  })
+
+  myMap.balloons.add myBalloon
+  myBalloon.show()
+  myMap.markers.add myMarker

@@ -1,0 +1,80 @@
+#contacts
+  h2 = @page.name
+  .container
+    h4 Телефон:
+    .phone
+      .fa.fa-phone-square
+      | 8 800 333 79 44 (бесплатно по России)
+    h4 E-mail:
+    .mail
+      .fa.fa-envelope
+      = mail_to "sale1@ip360.ru", "sale1@ip360.ru"
+      br
+      .fa.fa-envelope
+      = mail_to "sale1@ip360.ru", "sale1@ip360.ru"
+      br
+    h4 Служба технической поддержки:
+    .fa.fa-envelope
+    = mail_to 'service@ip360.ru', 'service@ip360.ru'
+
+    .adress
+      h4 Наш адрес:
+      .fa.fa-home
+      | г. Новосибирск, ул. Пирогова, 26
+
+      #map style="width:730px; height:400px;"
+        javascript:
+          var map;
+
+          DG.then(function () {
+            map = DG.map('map', {
+              "center": [54.850612705552, 83.097586065665],
+              "zoom": 16,
+              "fullscreenControl": false,
+              "zoomControl": false
+            });
+            DG.popup([54.850612705552, 83.097586065665]).setLatLng([54.850612705552, 83.097586065665]).setContent('Офис компании АС-Ритейл').openOn(map);
+          });
+
+/<
+/a
+/id = "firmsonmap_biglink"
+/href = "http://maps.2gis.ru/#/?history=project/novosibirsk/center//zoom//state/widget/id/70000001007438034/firms/70000001007438034" > Перейти
+/к
+/большой
+/карте < / a >
+/< script
+/charset = "utf-8"
+/type = "text/javascript"
+/src = "http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js" > < / script >
+/< script
+/charset = "utf-8"
+/type = "text/javascript" > new DGWidgetLoader({
+/  "borderColor": "#a3a3a3",
+/  "width": "900",
+/  "height": "600",
+/  "wid": "b151ce4431db53ca2de4a9c489a0bd9d",
+/  "pos": {"lon": "83.097586065665", "lat": "54.850612705552", "zoom": "18"},
+/  "opt": {
+/    "ref": "hidden",
+/    "card": ["name", "contacts", "schedule", "payings", "flamp"],
+/    "city": "novosibirsk"
+/  },
+/  "org": [{
+/    "id": "70000001007438034",
+/    "hash": "e1Cfqa3483467H1J9edduvgc0311G3I2766B03020A46A63AgAhd69GAH3G24289GHsuHAh"
+/  }]
+/});
+/</
+/script >
+/< noscript
+/style = "color:#c00;font-size:16px;font-weight:bold;" > Виджет
+/карты
+/использует
+/JavaScript.Включите
+/его
+/в
+/настройках
+/вашего
+/браузера. < / noscript >
+/

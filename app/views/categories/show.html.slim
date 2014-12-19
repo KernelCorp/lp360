@@ -5,8 +5,7 @@
       a href="#{product_path(product)}#/description"
         .product
           .product_image
-            = image_tag 'house.png'
-            /img src=product.image.url(:medium)
+            img src=product.image.url(:medium)
           .content
             .name
               = product.name
