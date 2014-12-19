@@ -15,7 +15,7 @@ html
             .four.wide.column
               = render partial: 'layouts/navigation'
             .twelve.wide.column
-              .ui.grey.segment
+              .ui.borderless.segment
                 = yield
           .five.column.ui.grid
             - News.limit(5).each do |news|
