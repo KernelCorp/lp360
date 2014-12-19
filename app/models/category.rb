@@ -14,9 +14,19 @@ class Category
   default_scope -> {asc :position}
 
   belongs_to :prototype
+  belongs_to :parent, class_name: 'Category', inverse_of: :children
+  has_many :children, class_name: 'Category', inverse_of: :parent
   has_many :products, dependent: :destroy
 
   after_save :transfer_options
+
+  def self.first_level
+    where parent: nil
+  end
+
+  def has_children?
+    children.empty?
+  end
 
   def transfer_options
     self.products.each do |product|

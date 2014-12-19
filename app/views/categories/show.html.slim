@@ -1,11 +1,14 @@
-h2 = @category.name
-.ui.items
-  - @category.products.each do |product|
-    a.item.wrapper.product href="#{product_path(product)}#/description"
-      .product_image
-        img src=product.image.url(:medium)
-      .content
-        .name
-          = product.name
-        .description
-          = product.preview
+#category
+  h2 = @category.name
+  .items
+    - @category.products.each do |product|
+      a href="#{product_path(product)}#/description"
+        .product
+          .product_image
+            = image_tag 'house.png'
+            /img src=product.image.url(:medium)
+          .content
+            .name
+              = product.name
+            .description
+              = product.preview
