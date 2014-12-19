@@ -1,0 +1,14 @@
+h2 Новости
+.one.column.ui.grid
+  - News.limit(5).each do |news|
+    .column
+      .ui.accordion
+        .title
+          i.dropdown.icon
+          = "#{news.created_at.strftime("%d-%m-%Y")} | #{news.title}"
+        .content
+          p
+            = news.text
+  coffee:
+    $(document).ready ->
+      $('.ui.accordion').accordion()
