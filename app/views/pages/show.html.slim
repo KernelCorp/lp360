@@ -1,9 +1,15 @@
-h2 = @page.name
+- if @page.parent.present?
+  .ui.grid
+    .four.wide.column
+      .left_menu
+        - @page.parent.pages.each do |page|
+          = menu_item page.name, page_path(page)
 
-= raw @page.text
-ul.attachments
-  - @page.attachments.each do |attachment|
-    li
-      .name
-        = attachment.name
-      = link_to 'cкачать', attachment.file.url
+      coffee:
+        new NavigationController()
+    .twelve.wide.column
+      .ui.grey.segment
+        = render 'pages/item'
+- else
+  = render 'pages/item'
+
