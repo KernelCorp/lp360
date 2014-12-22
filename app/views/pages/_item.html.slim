@@ -1,8 +1,8 @@
 h2 = @page.name
 = raw @page.text
-  ul.attachments
-    - @page.attachments.each do |attachment|
-      li
-        .name
-          = attachment.name
-        = link_to 'cкачать', attachment.file.url
+ul.attachments
+  - @page.attachments.each do |attachment|
+    li
+      .name
+        = attachment.name
+      = link_to 'cкачать', attachment.file.url
