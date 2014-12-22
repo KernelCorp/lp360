@@ -17,12 +17,12 @@ html
                 li
                   table
                     tr
-                      td
+                      td#left
                         .left
                           .name = product.name
                           .preview = product.preview
                           .description = product.description
-                      td
+                      td#right
                         .photo
                           a href=product_path(product)
                             img src=product.image.url title=product.name
