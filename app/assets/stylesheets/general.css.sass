@@ -1,6 +1,19 @@
 body
   font-family: 'agora_sans_light'
   margin: 0
+
+html, body, #wrap
+  height: 100%
+
+
+body
+  >#wrap
+    height: auto
+    min-height: 100%
+    #main
+      padding-bottom: 100px
+
+
 a.wrapper
   text-decoration: none
   color: inherit
@@ -129,7 +142,9 @@ a.wrapper
   background: #dfe6ea
   color: #4b4d5b
   width: 100%
-  display: inline-block
+  position: relative
+  margin-top: -100px /* отрицательное значение высоты футера */
+  clear: both
 
   .inner
     padding-top: 10px

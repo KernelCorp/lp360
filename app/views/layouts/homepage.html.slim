@@ -8,22 +8,22 @@ html
   body
     #wrap
       = render partial: 'layouts/header'
-      .slider
-        ul.bxslider
-          - if @slider.present?
-            - @slider.products.each do |product|
-              li
-                table
-                  tr
-                    td
-                      .left
-                        .name = product.name
-                        .preview = product.preview
-                        .description = product.description
-                    td
-                      .photo
-                        a href=product_path(product)
-                          img src=product.image.url title=product.name
-      /img src=product.image.url title=product.name
-    footer
+      #main
+        .slider
+          ul.bxslider
+            - if @slider.present?
+              - @slider.products.each do |product|
+                li
+                  table
+                    tr
+                      td
+                        .left
+                          .name = product.name
+                          .preview = product.preview
+                          .description = product.description
+                      td
+                        .photo
+                          a href=product_path(product)
+                            img src=product.image.url title=product.name
+    #footer
       = render partial: 'layouts/footer'

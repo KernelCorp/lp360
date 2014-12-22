@@ -9,7 +9,8 @@ html
   body
     #wrap
       = render partial: 'layouts/header'
-      .container
-        = yield
-    footer
+      #main
+        .container
+          = yield
+    #footer
       = render partial: 'layouts/footer'
