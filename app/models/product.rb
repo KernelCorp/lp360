@@ -18,7 +18,7 @@ class Product
   belongs_to :category
   embeds_many :options
 
-  accepts_nested_attributes_for :options
+  accepts_nested_attributes_for :options, allow_destroy: true
 
   has_mongoid_attached_file :image, styles: { medium: '210x150>>'}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

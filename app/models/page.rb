@@ -7,7 +7,7 @@ class Page
   has_many :pages
   embeds_many :attachments, cascade_callbacks: true
 
-  accepts_nested_attributes_for :attachments
+  accepts_nested_attributes_for :attachments, allow_destroy: true
 
   scope :first_lvl, ->{ where parent: nil}
 end
