@@ -8,7 +8,7 @@ h2 Новости
           = "#{news.created_at.strftime("%d-%m-%Y")} | #{news.title}"
         .content
           p
-            = news.text
+            = raw news.text
   coffee:
     $(document).ready ->
       $('.ui.accordion').accordion()

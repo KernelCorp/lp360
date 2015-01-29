@@ -50,4 +50,12 @@ RailsAdmin.config do |config|
       include_all_fields
     end
   end
+
+  config.model News do
+    edit do
+      field :text, :ck_editor
+      include_all_fields
+    end
+  end
+
 end
