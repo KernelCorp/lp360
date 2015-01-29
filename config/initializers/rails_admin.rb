@@ -45,6 +45,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Page do
+    nestable_list true
     edit do
       field :text, :ck_editor
       include_all_fields

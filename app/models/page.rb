@@ -10,4 +10,5 @@ class Page
   accepts_nested_attributes_for :attachments, allow_destroy: true
 
   scope :first_lvl, ->{ where parent: nil}
+  default_scope -> {asc :position}
 end
