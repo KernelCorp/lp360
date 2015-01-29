@@ -12,8 +12,6 @@
           span.second
             | ВИДЕО НАБЛЮДЕНИЯ
             i.fa.fa-play style='display: inline; position: relative; top: -35px; left: -85px; color: #e31e24; font-size: 10px;'
-
-          /= image_tag ('slogan.png')
       #info
         .phone
           i.fa.fa-phone style='margin-right: 15px;'
@@ -27,9 +25,17 @@
             = mail_to ('service@ip360.ru')
 
     .top_menu
-      .item
-        = link_to 'Каталог', categories_path
       - sub_menus = []
+      .item
+        .not_empty
+          .parent_head
+            a onclick="$('.cat_menu').slideToggle('slow')"
+              |Каталог
+          .cat_menu
+            - Category.first_level.each do |cat|
+              .item
+                = link_to cat.name, category_path(cat)
+
       - Page.first_lvl.each do |page|
         - if page.pages.empty?
           = menu_item(page.name, page_path(page))
@@ -38,7 +44,7 @@
             .not_empty
               .parent_head
                 - sub_menus << page
-                a onclick="$('.children##{page.id}').toggle()"
+                a onclick="$('.children##{page.id}').slideToggle('slow')"
                   = page.name
               - sub_menus.each do |sub|
                 .children id=sub.id style="display:none"
